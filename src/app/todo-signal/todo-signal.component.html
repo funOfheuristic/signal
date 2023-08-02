@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Fun Of Heuristic TODO Signal</h1>
+  <form class="input-group" (submit)="addTask($event)">
+    <input
+      [value]="taskString()"
+      (input)="search($event)"
+      placeholder="Search or add a task..."
+    />
+    <button type="submit">Add</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let task of filteredTasks(); index as i">
+      <h2>{{ task }}</h2>
+      <button class="delete-button" (click)="deleteTask(i)">Delete</button>
+    </li>
+  </ul>
+</div>
