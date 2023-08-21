@@ -15,4 +15,8 @@
       <button class="delete-button" (click)="deleteTask(i)">Delete</button>
     </li>
   </ul>
+
+  <div *ngIf="loader">
+    <h1>Adding...</h1>
+  </div>
 </div>
